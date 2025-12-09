@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Compressive Strength Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="container mt-5">
+    <h1 class="mb-4">Concrete Compressive Strength Prediction</h1>
+    <form action="/predict" method="POST">
+        <div class="mb-3">
+            <label for="Cement" class="form-label">Cement:</label>
+            <input type="text" class="form-control" name="Cement" required>
+        </div>
+        <div class="mb-3">
+            <label for="Superplasticizer" class="form-label">Superplasticizer:</label>
+            <input type="text" class="form-control" name="Superplasticizer" required>
+        </div>
+        <div class="mb-3">
+            <label for="Concrete compressive strength" class="form-label">Concrete compressive strength:</label>
+            <input type="text" class="form-control" name="Concrete compressive strength" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+
+    {% if prediction_test %}
+        <h2 class="mt-4">{{ prediction_test }}</h2>
+    {% endif %}
+
+    <!-- Bootstrap JS (optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car MPG Prediction</title>
+</head>
+
+<body>
+    <h1>Car MPG Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="Lot Area">Lot Area:</label>
+        <input type="text" name="Lot Area" required><br>
+        <label for="Year Built">Year Built:</label>
+        <input type="text" name="Year Built" required><br>
+        <label for="Full Bath">Full Bath:</label>
+        <input type="text" name="Full Bath" required><br>
+        <label for="Fireplace">Fireplace:</label>
+        <input type="text" name="Fireplace" required><br>
+        <label for="Lot Frontage">Lot Frontage:</label>
+        <input type="text" name="Lot Frontage" required><br> -->
+
+        <!-- <label for="model_year">Model Year:</label>
+        <input type="text" name="model_year" required><br>
+        <label for="origin">Origin:</label>
+        <input type="text" name="origin" required><br> -->
+
+
+        <!-- <button type="submit">Predict</button>
+    </form>
+
+   {% if prediction_test %}
+        <h2>{{ prediction_test }}</h2>
+    {% endif %}
+</body>
+</html> -->
